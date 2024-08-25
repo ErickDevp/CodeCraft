@@ -17,6 +17,7 @@ document.addEventListener('click', e => {
     e.preventDefault();
     const el = e.target;
 
+    console.log(el)
     if(el.classList.contains('relatorio')) {
         if(relatorio.classList.contains('active')) {
             relatorio.classList.remove('active');
@@ -42,6 +43,14 @@ document.addEventListener('click', e => {
             open.classList.remove('active');
         } else {
             open.classList.add('active');  
+        }
+    }
+
+    if(el.classList.contains('assistente-tonia-dicas')) {
+        if(chat.classList.contains('active')) {
+            chat.classList.remove('active');
+        } else {
+            chat.classList.add('active');
         }
     }
 })
