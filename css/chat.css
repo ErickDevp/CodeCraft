@@ -224,6 +224,11 @@
     font-size: 14px;
 }
 
+.msg-user{
+    margin: 3px 0;
+}
+
+
 .enviada {
     width: 210px;
     height: 30px;
