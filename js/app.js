@@ -81,14 +81,19 @@ function msgAssistenteDicas() {
     msgChat.appendChild(section);
 }
 
-function msgAssistente(msg) {
-    const section = criaSection();
-    const p = criaP();
-
-    p.innerText = msg;
-
-    img.classList.add('foto');
-    img.setAttribute('src', '../img/icon-assistant.svg');
+function msgAssistente() {
+    msgChat.innerHTML = `
+             <section class="msg-opcoes ">
+                <img class="foto" src="../img/icon-assistant.svg" alt="assistente">
+                <div class="mensagem recebida">
+                    <p>Olá! Como posso te ajudar hoje?</p>
+                    <div class="opcoes">
+                        <div class="opcao">Relatorio</div>
+                        <div class="opcao">Gerenciamento</div>
+                    </div>
+                </div>
+            </section>
+            `
 }
 
 function msgUserBoolean() {
@@ -125,7 +130,7 @@ document.addEventListener('click', e => {
             chat.classList.remove('active');
             relatorio.classList.add('active');
             limpaChat();
-
+            msgAssistente();
         } else {
             chat.classList.add('active');
         }
